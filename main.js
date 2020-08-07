@@ -61,6 +61,7 @@ window.boot = function () {
         var bar = document.getElementById('bar');
         var pageloading = document.getElementById('pageloading');
         cc.loader.onProgress = function (completedCount, totalCount, item) {
+
             var percent = 100 * completedCount / totalCount;
             //$('.bar').css('width',percent.toFixed(2) + '%');
             if(percent !=100)

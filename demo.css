@@ -101,7 +101,7 @@ html,body{
     }
 }
 .pageloading{
-    background-color: #1abc9c;
+    background-color: #E65E6C;
     position:fixed;
     width:100%;
     height: 100%;
@@ -124,7 +124,7 @@ html,body{
     transition: 0.5s;
 }
 .pageloading .loading .bar{
-    background-color:#e74c3c;
+    background-color: #db4d6d;
     height:100%;
     width:0;
 }
