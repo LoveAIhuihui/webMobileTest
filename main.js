@@ -63,7 +63,10 @@ window.boot = function () {
         cc.loader.onProgress = function (completedCount, totalCount, item) {
             var percent = 100 * completedCount / totalCount;
             //$('.bar').css('width',percent.toFixed(2) + '%');
-            bar.style.width = percent.toFixed(2) + '%';
+            if(percent !=100)
+            {
+                bar.style.width = percent.toFixed(2) + '%';
+            }
             console.log(percent);
             if(percent > 90 )
             {
