@@ -67,7 +67,7 @@ window.boot = function () {
             console.log(percent);
             if(percent > 90 )
             {
-                pageloading.addClass('complete');
+                //pageloading.addClass('complete');
             }
             // if (progressBar) {
             //     progressBar.style.width = percent.toFixed(2) + '%';
