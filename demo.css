@@ -124,7 +124,7 @@ html,body{
     transition: 0.5s;
 }
 .pageloading .loading .bar{
-    background-color: #db4d6d;
+    background-color:#e74c3c;
     height:100%;
     width:0;
 }
