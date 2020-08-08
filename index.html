@@ -38,23 +38,15 @@
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
   <link rel="stylesheet" type="text/css" href="style-mobile.css"/>
-  <link rel="stylesheet" type="text/css" href="demo.css"/>
   <link rel="icon" href="favicon.ico"/>
 </head>
 <body>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
-  <div id='pageloading' class="pageloading">
-    <div class="monstr">
-        <div class="eye">
-            <div class="eyeBall">
-            </div>
-        </div>
-        <div class="month">
-        </div>   
+  <div id="splash">
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
     </div>
-    <div class="loading">
-        <div id='bar' class="bar"></div>
-    </div>
+  </div>
 
 <script src="src/settings.js" charset="utf-8"></script>
 
@@ -68,8 +60,8 @@
     }
 
     var debug = window._CCSettings.debug;
-    // var splash = document.getElementById('splash');
-    // splash.style.display = 'block';
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
 
     function loadScript (moduleName, cb) {
       function scriptLoaded () {

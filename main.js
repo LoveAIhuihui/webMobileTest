@@ -56,34 +56,19 @@ window.boot = function () {
 
     function setLoadingDisplay () {
         // Loading splash scene
-        //var splash = document.getElementById('splash');
-        //var progressBar = splash.querySelector('.progress-bar span');
-        var bar = document.getElementById('bar');
-        var pageloading = document.getElementById('pageloading');
+        var splash = document.getElementById('splash');
+        var progressBar = splash.querySelector('.progress-bar span');
         cc.loader.onProgress = function (completedCount, totalCount, item) {
-
             var percent = 100 * completedCount / totalCount;
-            //$('.bar').css('width',percent.toFixed(2) + '%');
-            if(percent !=100)
-            {
-                bar.style.width = percent.toFixed(2) + '%';
+            if (progressBar) {
+                progressBar.style.width = percent.toFixed(2) + '%';
             }
-            console.log(percent);
-            if(percent > 90 )
-            {
-                //pageloading.addClass('complete');
-            }
-            // if (progressBar) {
-            //     progressBar.style.width = percent.toFixed(2) + '%';
-            // }
         };
-        // splash.style.display = 'block';
-        // progressBar.style.width = '0%';
-        //pageloading.style.display = 'block';
-        //bar.style.width = '0%';
+        splash.style.display = 'block';
+        progressBar.style.width = '0%';
 
         cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
-            pageloading.style.display = 'none';
+            splash.style.display = 'none';
         });
     }
 
